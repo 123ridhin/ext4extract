@@ -30,28 +30,3 @@ def exception_handler(exception_type, exception, traceback):
 if __name__ == '__main__':
     sys.excepthook = exception_handler
     Application().run()
-
-try:
-    # try stuff
-except OSError as oserr:
-    if oserr.errno != errno.ENAMETOOLONG:
-        # ignore
-    else:
-        # caught...now what?
-
-try:
-    # try stuff
-except Exception as err:
-    # get the name attribute from the exception class
-    errname = type(err).__name__
-    # get the errno attribute from the exception class
-    errnum = err.errno
-    if (errname == 'OSError') and (errnum == errno.ENAMETOOLONG):
-        # handle specific to OSError [Errno 36]
-    else if (errname == 'ExceptionNameHere' and ...:
-        # handle specific to blah blah blah
-    .
-    .
-    .
-    else:
-        raise         
