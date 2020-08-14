@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3.6.9
 
 """
     ext4extract - Ext4 data extracting tool
